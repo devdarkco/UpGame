@@ -3,9 +3,8 @@ package com.devdarkco.up.entities;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Vector2;
-import com.devdarkco.up.logic.PlayerMovement;
-import com.devdarkco.up.logic.PlayerStats;
+import com.devdarkco.up.logic.player.PlayerMovement;
+import com.devdarkco.up.logic.player.PlayerStats;
 
 public class Player extends Entity {
 
@@ -22,7 +21,7 @@ public class Player extends Entity {
     @Override
     public void render(SpriteBatch batch) {
         super.render(batch);
-        batch.draw(this.texture, getPosition().x, getPosition().y);
+        batch.draw(this.texture, getPosition().x, getPosition().y, 75, 75);
     }
 
     @Override
